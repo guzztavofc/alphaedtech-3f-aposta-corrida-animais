@@ -1,17 +1,15 @@
-let rep1 = 5
-let num1 = 5
-for (let index = 0; index < rep1; index++) {
-    if (num1 > 3) {
-        basic.showIcon(IconNames.Heart)
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
-    } else {
-        basic.showIcon(IconNames.No)
+input.onButtonPressed(Button.A, function () {
+    codbi.push(A)
+    basic.showString(A)
+})
+input.onButtonPressed(Button.AB, function () {
+    for (let valor of codbi) {
+        basic.showString(valor)
+        if (valor == A) {
+            basic.showIcon(IconNames.Heart)
+        } else {
+            basic.showIcon(IconNames.Sad)
+        }
         basic.showLeds(`
             . . . . .
             . . . . .
@@ -20,8 +18,17 @@ for (let index = 0; index < rep1; index++) {
             . . . . .
             `)
     }
-    num1 = num1 - 1
-}
+})
+input.onButtonPressed(Button.B, function () {
+    codbi.push(B)
+    basic.showString(B)
+})
+let B = ""
+let A = ""
+let codbi: string[] = []
+codbi = []
+A = "A"
+B = "B"
 basic.forever(function () {
 	
 })
