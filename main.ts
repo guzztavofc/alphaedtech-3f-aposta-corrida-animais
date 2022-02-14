@@ -10,15 +10,25 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onButtonPressed(Button.B, function () {
+    basic.showIcon(IconNames.SmallDiamond)
+    if (animal == 1) {
+        basic.showNumber(animal)
+    } else if (animal == 2) {
+        basic.showNumber(animal)
+    } else {
+        animal = 3
+        basic.showNumber(animal)
+    }
     escolha = randint(1, 3)
     basic.showIcon(IconNames.Heart)
     basic.showNumber(escolha)
-    basic.pause(5000)
-    if (animal == escolha || animal + 3 == escolha) {
+    basic.pause(500)
+    if (animal == escolha) {
         basic.showIcon(IconNames.Happy)
     } else {
         basic.showIcon(IconNames.Sad)
     }
+    animal = 0
 })
 let i = 0
 let escolha = 0
