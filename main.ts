@@ -17,6 +17,3 @@ function criarHash (parametro: number) {
     }
     return hash
 }
-basic.forever(function () {
-    basic.showString("" + (criarHash(18)))
-})
