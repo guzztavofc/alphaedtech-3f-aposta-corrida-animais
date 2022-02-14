@@ -1,48 +1,21 @@
-input.onButtonPressed(Button.A, function () {
-    codbi.push(A)
-    basic.showString(A)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
-})
-input.onButtonPressed(Button.AB, function () {
-    for (let valor of codbi) {
-        basic.showString(valor)
-        if (valor == A) {
-            basic.showIcon(IconNames.Heart)
+function criarHash (parametro: number) {
+    let parametro2 = 0
+    hash = ""
+    num = parametro2
+    for (let index = 0; index < parametro2 % 4; index++) {
+        if (num % 6 == 0) {
+            hash = "" + hash + "a1"
+        } else if (num % 2 == 0) {
+            hash = "" + hash + "b2"
+        } else if (num % 3 == 0) {
+            hash = "" + hash + "c3"
         } else {
-            basic.showIcon(IconNames.Sad)
+            hash = "" + hash + "x#"
         }
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            . . . . .
-            `)
+        num = num / 2
     }
-})
-input.onButtonPressed(Button.B, function () {
-    codbi.push(B)
-    basic.showString(B)
-    basic.showLeds(`
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        . . . . .
-        `)
-})
-let B = ""
-let A = ""
-let codbi: string[] = []
-codbi = []
-A = "A"
-B = "B"
-basic.forever(function () {
-	
-})
+    return hash
+}
+let num = 0
+let hash = ""
+basic.showString("" + (criarHash(18)))
