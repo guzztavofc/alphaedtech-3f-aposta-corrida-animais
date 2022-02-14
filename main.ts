@@ -1,19 +1,30 @@
-let hash = ""
-let num = 0
-function criarHash (parametro: number) {
-    hash = ""
-    num = parametro
-    for (let index = 0; index < parametro % 4; index++) {
-        if (num % 6 == 0) {
-            hash = "" + hash + "a1"
-        } else if (num % 2 == 0) {
-            hash = "" + hash + "b2"
-        } else if (num % 3 == 0) {
-            hash = "" + hash + "c3"
-        } else {
-            hash = "" + hash + "x#"
-        }
-        num = num / 2
+input.onButtonPressed(Button.A, function () {
+    if (i <= 3) {
+        animal = animal + 1
+        basic.showNumber(animal)
+        i = i + 1
     }
-    return hash
-}
+    if (i > 3) {
+        i = 1
+        animal = 0
+    }
+})
+input.onButtonPressed(Button.B, function () {
+    basic.showIcon(IconNames.Heart)
+    basic.showNumber(animal)
+    escolha = randint(1, 3)
+    basic.showIcon(IconNames.Heart)
+    basic.showNumber(escolha)
+    basic.pause(1000)
+    if (animal == escolha || animal + 3 == escolha) {
+        basic.showIcon(IconNames.Happy)
+    } else {
+        basic.showIcon(IconNames.Sad)
+    }
+})
+let i = 0
+let escolha = 0
+let animal = 0
+animal = 0
+escolha = 0
+i = 1
