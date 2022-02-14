@@ -1,8 +1,9 @@
+let hash = ""
+let num = 0
 function criarHash (parametro: number) {
-    let parametro2 = 0
     hash = ""
-    num = parametro2
-    for (let index = 0; index < parametro2 % 4; index++) {
+    num = parametro
+    for (let index = 0; index < parametro % 4; index++) {
         if (num % 6 == 0) {
             hash = "" + hash + "a1"
         } else if (num % 2 == 0) {
@@ -16,6 +17,6 @@ function criarHash (parametro: number) {
     }
     return hash
 }
-let num = 0
-let hash = ""
-basic.showString("" + (criarHash(18)))
+basic.forever(function () {
+    basic.showString("" + (criarHash(18)))
+})
