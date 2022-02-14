@@ -1,6 +1,13 @@
 input.onButtonPressed(Button.A, function () {
     codbi.push(A)
     basic.showString(A)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 })
 input.onButtonPressed(Button.AB, function () {
     for (let valor of codbi) {
@@ -22,6 +29,13 @@ input.onButtonPressed(Button.AB, function () {
 input.onButtonPressed(Button.B, function () {
     codbi.push(B)
     basic.showString(B)
+    basic.showLeds(`
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        . . . . .
+        `)
 })
 let B = ""
 let A = ""
