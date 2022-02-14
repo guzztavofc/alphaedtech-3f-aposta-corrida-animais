@@ -15,7 +15,7 @@ input.onButtonPressed(Button.B, function () {
     escolha = randint(1, 3)
     basic.showIcon(IconNames.Heart)
     basic.showNumber(escolha)
-    basic.pause(1000)
+    basic.pause(5000)
     if (animal == escolha || animal + 3 == escolha) {
         basic.showIcon(IconNames.Happy)
     } else {
