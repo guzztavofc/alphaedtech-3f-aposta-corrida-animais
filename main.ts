@@ -10,8 +10,6 @@ input.onButtonPressed(Button.A, function () {
     }
 })
 input.onButtonPressed(Button.B, function () {
-    basic.showIcon(IconNames.Heart)
-    basic.showNumber(animal)
     escolha = randint(1, 3)
     basic.showIcon(IconNames.Heart)
     basic.showNumber(escolha)
